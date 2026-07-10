@@ -9,7 +9,8 @@ The project covers the complete machine learning workflow, including data prepro
 ---
 
 ### Confusion Matrix
-![Confusion Matrix](images/Confusion Matrix.png.png)
+![Confusion Matrix](images/Confusion Matrix.png)
+![Confusion Matrix](images/Confusion Matrix.png)
 
 ### ROC Curve
 ![ROC Curve](images/ROC.png)
