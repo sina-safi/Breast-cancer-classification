@@ -77,8 +77,8 @@ The best model achieved:
 ```
 Breast-cancer-classification/
 │
-├── Breast-cancer-classification.ipynb
 ├── README.md
+├── Breast-cancer-classification.ipynb
 ├── requirements.txt
 └── images/
 ```
