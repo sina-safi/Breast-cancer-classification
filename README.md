@@ -8,8 +8,6 @@ The project covers the complete machine learning workflow, including data prepro
 
 ---
 
-## 📈 Visualizations
-
 ### Confusion Matrix
 ![Confusion Matrix](images/confusion_matrix.png)
 
@@ -18,8 +16,8 @@ The project covers the complete machine learning workflow, including data prepro
 
 ### Model Performance Comparison
 ![Model Performance](images/model_comparison.png)
----
 
+---
 ## Dataset
 
 - **Dataset:** Wisconsin Breast Cancer Dataset
