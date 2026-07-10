@@ -2,15 +2,28 @@
 
 ## Overview
 
-This project compares six machine learning algorithms for classifying breast cancer tumors as benign or malignant using the Wisconsin Breast Cancer Dataset.
+This project applies machine learning techniques to classify breast cancer tumors as **benign** or **malignant** using the Wisconsin Breast Cancer Dataset.
 
-The main goal was to build a complete machine learning workflow, including data preprocessing, model selection, hyperparameter tuning, and performance evaluation.
+The project covers the complete machine learning workflow, including data preprocessing, exploratory data analysis (EDA), feature scaling, hyperparameter tuning, model comparison, and performance evaluation.
+
+---
+
+## Project Preview
+
+### ROC Curve
+
+![ROC Curve](images/roc_curve.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
 
 ---
 
 ## Dataset
 
 - **Dataset:** Wisconsin Breast Cancer Dataset
+- **Source:** UCI Machine Learning Repository
 - **Samples:** 569
 - **Features:** 30 numerical features
 - **Target:** Diagnosis (Benign / Malignant)
@@ -19,53 +32,51 @@ The main goal was to build a complete machine learning workflow, including data 
 
 ## Project Workflow
 
-1. Data loading and cleaning
-2. Exploratory Data Analysis (EDA)
-3. Correlation analysis
-4. Train / Validation / Test split (70/15/15)
-5. Outlier handling using a custom Winsorizer
-6. Feature scaling with MinMaxScaler
-7. Model training
-8. Hyperparameter tuning using GridSearchCV
-9. Model evaluation
-10. ROC Curve and Confusion Matrix visualization
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Correlation analysis
+- Train / Validation / Test split (70% / 15% / 15%)
+- Outlier handling using a custom Winsorizer
+- Feature scaling with MinMaxScaler
+- Model training
+- Hyperparameter tuning using GridSearchCV
+- Model evaluation
+- ROC Curve and Confusion Matrix visualization
 
 ---
 
-## Models
+## Machine Learning Models
 
-The following models were trained and compared:
+The following classification algorithms were evaluated:
 
 - Logistic Regression
 - Decision Tree
 - Random Forest
 - Support Vector Machine (SVM)
-- K-Nearest Neighbors
+- K-Nearest Neighbors (KNN)
 - Gaussian Naive Bayes
 
 ---
 
 ## Results
 
-| Metric | Value |
-|---------|------:|
-| Accuracy | 97% |
-| ROC-AUC | 0.998 |
+| Metric | Score |
+|--------|------:|
+| Accuracy | **97%** |
+| Precision | **97%** |
+| Recall | **94%** |
+| F1-score | **95%** |
+| ROC-AUC | **0.998** |
 
-The best model achieved:
-
-- Accuracy: **97%**
-- Precision: **97%**
-- Recall: **94%**
-- ROC-AUC: **0.998**
+Among the evaluated models, **Logistic Regression** achieved the best overall performance on the test set.
 
 ---
 
 ## Technologies
 
 - Python
-- Pandas
 - NumPy
+- Pandas
 - Matplotlib
 - Seaborn
 - Scikit-learn
@@ -74,31 +85,59 @@ The best model achieved:
 
 ## Repository Structure
 
-```
+```text
 Breast-cancer-classification/
 │
 ├── README.md
-├── Breast-cancer-classification.ipynb
 ├── requirements.txt
+├── Breast-cancer-classification.ipynb
 └── images/
+    ├── correlation_heatmap.png
+    ├── confusion_matrix.png
+    ├── model_accuracy.png
+    └── roc_curve.png
 ```
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/sina-safi/Breast-cancer-classification.git
+
+cd Breast-cancer-classification
+
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Project
+
+Open the Jupyter Notebook:
+
+```bash
+jupyter notebook Breast-cancer-classification.ipynb
+```
+
+or open it directly in **Google Colab**.
 
 ---
 
 ## Future Improvements
 
-Some possible improvements include:
+Possible extensions of this project include:
 
 - Feature selection techniques
 - XGBoost and LightGBM models
-- SHAP feature importance
-- Model deployment using Streamlit
+- Explainable AI using SHAP
+- Model deployment with Streamlit
 
 ---
 
-## Notes
+## Disclaimer
 
-This project was created for learning and portfolio purposes. It is **not intended for medical diagnosis**.
+This project was developed for educational and portfolio purposes only. It should **not** be used for medical diagnosis or clinical decision-making.
 
 ---
 
