@@ -55,6 +55,8 @@ Benign Malignant
 Actual Benign 53 1
 Actual Malignant 2 30
 
+text
+
 ---
 
 ## 🛠️ Pipeline Features
@@ -67,13 +69,42 @@ Actual Malignant 2 30
 
 ## 🚀 Quick Start
 
+### Installation
+
 ```bash
-# Clone
-git clone https://github.com/yourusername/breast-cancer-classification.git
-cd breast-cancer-classification
+# Clone the repository
+git clone https://github.com/sina-safi/Breast-cancer-classification.git
+cd Breast-cancer-classification
 
-# Install
+# Install dependencies
 pip install -r requirements.txt
-
-# Run
+Run the Analysis
+bash
+# Run the Python script
 python breast_cancer_analysis.py
+📁 Dataset
+Wisconsin Breast Cancer Database
+
+Samples: 569 (357 benign, 212 malignant)
+
+Features: 30 numeric measurements
+
+Source: UCI Machine Learning Repository
+
+📦 Dependencies
+txt
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+⚠️ Medical Disclaimer
+This is an educational/academic project only. Not for actual medical diagnosis. Always consult healthcare professionals.
+
+👤 Author
+Sina Safi
+
+GitHub: @sina-safi
+
+📄 License
+MIT License - see LICENSE file for details
