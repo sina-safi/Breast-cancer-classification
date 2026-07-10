@@ -1,110 +1,109 @@
-# 🧬 Breast Cancer Detection - Machine Learning Classification
+# Breast Cancer Classification using Machine Learning
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0+-orange.svg)](https://scikit-learn.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+## Overview
 
-## 📌 Project Overview
+This project compares six machine learning algorithms for classifying breast cancer tumors as benign or malignant using the Wisconsin Breast Cancer Dataset.
 
-Machine learning pipeline for breast cancer diagnosis using the Wisconsin Breast Cancer Dataset. Compares 6 classification algorithms with comprehensive preprocessing and hyperparameter optimization.
-
-### 🎯 Results (Test Set)
-
-| Metric | Score |
-|--------|-------|
-| **Accuracy** | **97%** |
-| **ROC-AUC** | **0.998** |
+The main goal was to build a complete machine learning workflow, including data preprocessing, model selection, hyperparameter tuning, and performance evaluation.
 
 ---
 
-## 📊 Model Performance
+## Dataset
 
-### Cross-Validation Results (5-Fold, Recall)
-
-| Model | Best Parameters | CV Recall |
-|-------|-----------------|-----------|
-| **Logistic Regression** | C=100, penalty=l2 | 0.939 |
-| **Decision Tree** | max_depth=5, criterion=gini, min_samples_leaf=4 | 0.925 |
-| **Random Forest** | n_estimators=200, max_features='log2' | 0.939 |
-| **SVM** | C=10, kernel=rbf, gamma=scale | 0.938 |
-| **K-Nearest Neighbors** | n_neighbors=5, p=1, weights=uniform | 0.932 |
-| **Naive Bayes** | var_smoothing=0.038 | 0.898 |
-
-### Validation Set Performance
-
-| Model | Accuracy | Precision | Recall | F1 | AUC |
-|-------|----------|-----------|--------|-----|-----|
-| **Logistic Regression** | 0.976 | 1.000 | 0.938 | 0.968 | 0.997 |
-| **Decision Tree** | 0.941 | 1.000 | 0.844 | 0.915 | 0.933 |
-| **Random Forest** | 0.965 | 1.000 | 0.906 | 0.951 | 0.992 |
-| **SVM** | 0.976 | 1.000 | 0.938 | 0.968 | 0.995 |
-| **Naive Bayes** | 0.929 | 0.933 | 0.875 | 0.903 | 0.987 |
-| **K-Nearest Neighbors** | 0.965 | 1.000 | 0.906 | 0.951 | 0.995 |
-
-### Test Set Classification Report
-
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-| Benign | 0.96 | 0.98 | 0.97 | 54 |
-| Malignant | 0.97 | 0.94 | 0.95 | 32 |
-| **Accuracy** | | | **0.97** | **86** |
-
-**Confusion Matrix:**
-Predicted
-Benign Malignant
-Actual Benign 53 1
-Actual Malignant 2 30
-
-text
+- **Dataset:** Wisconsin Breast Cancer Dataset
+- **Samples:** 569
+- **Features:** 30 numerical features
+- **Target:** Diagnosis (Benign / Malignant)
 
 ---
 
-## 🛠️ Pipeline Features
+## Project Workflow
 
-- **Outlier Handling:** Custom Winsorizer (1st-99th percentile)
-- **Feature Scaling:** MinMaxScaler
-- **Validation Strategy:** Stratified 70/15/15 split
-- **Hyperparameter Tuning:** GridSearchCV with 5-fold CV
-- **Primary Metric:** Recall
+1. Data loading and cleaning
+2. Exploratory Data Analysis (EDA)
+3. Correlation analysis
+4. Train / Validation / Test split (70/15/15)
+5. Outlier handling using a custom Winsorizer
+6. Feature scaling with MinMaxScaler
+7. Model training
+8. Hyperparameter tuning using GridSearchCV
+9. Model evaluation
+10. ROC Curve and Confusion Matrix visualization
 
-## 🚀 Quick Start
+---
 
-### Installation
+## Models
 
-```bash
-# Clone the repository
-git clone https://github.com/sina-safi/Breast-cancer-classification.git
-cd Breast-cancer-classification
+The following models were trained and compared:
 
-# Install dependencies
-pip install -r requirements.txt
-Run the Analysis
-bash
-# Run the Python script
-python breast_cancer_analysis.py
-📁 Dataset
-Wisconsin Breast Cancer Database
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors
+- Gaussian Naive Bayes
 
-Samples: 569 (357 benign, 212 malignant)
+---
 
-Features: 30 numeric measurements
+## Results
 
-Source: UCI Machine Learning Repository
+| Metric | Value |
+|---------|------:|
+| Accuracy | 97% |
+| ROC-AUC | 0.998 |
 
-📦 Dependencies
-txt
-numpy>=1.21.0
-pandas>=1.3.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-scikit-learn>=1.0.0
-⚠️ Medical Disclaimer
-This is an educational/academic project only. Not for actual medical diagnosis. Always consult healthcare professionals.
+The best model achieved:
 
-👤 Author
-Sina Safi
+- Accuracy: **97%**
+- Precision: **97%**
+- Recall: **94%**
+- ROC-AUC: **0.998**
 
-GitHub: @sina-safi
+---
 
-📄 License
-MIT License - see LICENSE file for details
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+---
+
+## Repository Structure
+
+```
+Breast-cancer-classification/
+│
+├── Breast-cancer-classification.ipynb
+├── README.md
+├── requirements.txt
+└── images/
+```
+
+---
+
+## Future Improvements
+
+Some possible improvements include:
+
+- Feature selection techniques
+- XGBoost and LightGBM models
+- SHAP feature importance
+- Model deployment using Streamlit
+
+---
+
+## Notes
+
+This project was created for learning and portfolio purposes. It is **not intended for medical diagnosis**.
+
+---
+
+## Author
+
+**Sina Safi**
+
+GitHub: https://github.com/sina-safi
