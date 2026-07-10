@@ -8,16 +8,16 @@ The project covers the complete machine learning workflow, including data prepro
 
 ---
 
-## Project Preview
-
-### ROC Curve
-
-![ROC Curve](images/roc_curve.png)
+## 📈 Visualizations
 
 ### Confusion Matrix
-
 ![Confusion Matrix](images/confusion_matrix.png)
 
+### ROC Curve
+![ROC Curve](images/roc_curve.png)
+
+### Model Performance Comparison
+![Model Performance](images/model_comparison.png)
 ---
 
 ## Dataset
